@@ -6,8 +6,7 @@ html {
     min-height: 100vh;
     margin: 0px;
     font-family: oswald, sans-serif;
-       
-  }
+}
 
 body {
     background-image: url("./images/tor1.jpg");
@@ -26,16 +25,51 @@ body > * {
 }
 
 body:after {
-    content:"";
+    content:""; /* What does this mean? */
     position: absolute;
     left: 0; top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .4);
     z-index: 1;
-   
 }
 
+.container {
+    display: flex;
+    height: 1275px;
+    width: 100%;
+    /*height: 70%;
+    width: 70%; */
+    justify-content: space-around;
+
+}
+
+.wiki {
+    height: 80%;
+    width: 30%;
+    background-color: aliceblue;
+}
+
+.youtube {
+    height: 80%;
+    width: 45%;
+    background-color: aliceblue;
+
+}
+
+.webpage {
+    height: 400px;
+    width: 100%;
+    background-color: aliceblue;
+    margin-bottom: 150px;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+}
+
+/*
 .name {
     margin-bottom: 30px;
 }
@@ -48,29 +82,6 @@ body:after {
     letter-spacing: 2px;
     font-size: 14px;
     margin: 0px;
-}
-
-.container {
-    display: flex;
-    height: 175px;
-    width: 100%;
-    /*height: 70%;
-    width: 70%; */
-    justify-content: space-around;
-
-}
-
-.wiki {
-    height: 60%;
-    width: 30%;
-    background-color: aliceblue;
-}
-
-.youtube {
-    height: 60%;
-    width: 45%;
-    background-color: aliceblue;
-
 }
 
 .landing {
@@ -95,7 +106,7 @@ h3, h4, h5 {
    
     margin: 0px;
 }
-/*
+
 .container {
     display: flex;
     justify-content: space-around;
