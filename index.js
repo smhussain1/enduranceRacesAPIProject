@@ -6,15 +6,11 @@ const youtube_baseurl = "";
 function userSearch() {
     // just creates the variable of the search term
     $('.entry-form').submit(function(event) {  
-        event.preventDefault();
-        //$('.display-results').empty();
+        event.preventDefault();    
         //let entry = $("#races option:selected").val();
         let entry = $('#races option:selected').text();
-        console.log(entry);
-        
+        //console.log(entry);
         searchYouTube(entry);
-        showWebsite(entry);
-
         }
       );
     }
@@ -26,7 +22,7 @@ function searchYouTube(entry) {
       part:'snippet',
       key:'AIzaSyDPmO5VRwaw1PS1caF2ZXpg1cXaEtjtWSM',
       q: entry,
-      maxResults: 4,
+      maxResults: 8,
       type: 'video',
       order: 'Relevance',
       safeSearch: 'strict',
@@ -50,8 +46,8 @@ function showYouTube(results) {
       $.each(results, function(index,value) {
         let title = value.snippet.title;
         console.log(title);
-        if (title.length > 70) {
-          title = title.substring(0, 70).trim() + '...';
+        if (title.length > 30) {
+          title = title.substring(0, 30).trim() + '...';
         }
         
         html += '<table><tr><td><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity>' + 
@@ -61,25 +57,15 @@ function showYouTube(results) {
         title + '</p></a><p class="videochannel">' + 
         value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') + ' &middot; <a href="https://www.youtube.com/channel/' + value.snippet.channelId + '" target="_blank">' +
         value.snippet.channelTitle + '</a></p><a class="read_description" href="#v' + index + '" rel="modal:open"><i class="fa fa-question-circle" aria-hidden="true"></i> Read description</a><p class="fulldescription" id="v' + index + '" style="display: none;"><span class="fd_title"><i class="fa fa-question-circle" aria-hidden="true"></i> ' + value.snippet.title + '</span><span class="fd_by">Posted by <a href="https://www.youtube.com/channel/' + value.snippet.channelId + '" target="_blank">' +
-        value.snippet.channelTitle + '</a> on '+ value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') +'</span>' + value.snippet.description + '<a class="fd_link" href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity rel="modal:close"> Watch the video to learn more<i>!</i></a></p><p class="videodescription">' + value.snippet.description.substring(0, 130).trim() + '...' + '</p></td></tr></table>';
+        value.snippet.channelTitle + '</a> on '+ value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') +'</span>' + value.snippet.description + '<a class="fd_link" href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity rel="modal:close"> Watch the video to learn more<i>!</i></a></p><p class="videodescription">' + value.snippet.description.substring(0, 40).trim() + '...' + '</p></td></tr></table>';
       });
       //console.log(html);
-      $('.youtube').append(html);
-      $('.youtube').append('<hr class="youtubehr"><p class="ext_link"><a href="https://www.youtube.com/results?search_query=' + $('#races option:selected').text() + 
+      $('.youtube').html(html); // changed the append here to html, and below
+      $('.external-link').html('<p class="ext_link"><a href="https://www.youtube.com/results?search_query=' + $('#races option:selected').text() + 
         '" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp;More on YouTube</a></p>');
       $('.results-page').removeClass('hidden');
 
     }
-}
-
-function showWebsite(entry) {
-    let entryUrl = '';
-    if (entry == 'Tor des Geants') {
-        entryUrl = 'https://www.tordesgeants.it/en';
-    } else if (entry == 'Ultra Trail Mont Blanc') {
-        entryUrl = 'https://utmbmontblanc.com/en/UTMB';
-    }
-    $('.webpage').html(`<embed class='web' src='${entryUrl}'>`)
 }
 
 $(function() {
