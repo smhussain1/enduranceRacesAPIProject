@@ -50,22 +50,22 @@ function showYouTube(results) {
       $.each(results, function(index,value) {
         let title = value.snippet.title;
         console.log(title);
-        if (title.length > 30) {
-          title = title.substring(0, 30).trim() + '...';
+        if (title.length > 75) {
+          title = title.substring(0, 75).trim() + '...';
         }
         
         html += '<table><tr><td><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity>' + 
         '<div class="thumbnailWrap"><img class="thumbnail" src="' + value.snippet.thumbnails.medium.url + 
-        '"><p class="play"><i class="fa fa-play-circle" aria-hidden="true"></i><br><span class="popup">Play here</span></p></div></a></td>' + 
+        '"><!--<p class="play"><i class="fa fa-play-circle" aria-hidden="true"></i><br><span class="popup">Play here</span></p>--></div></a></td>' + 
         '<td class="tdtext"><a href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity><p class="videotitle">' + 
         title + '</p></a><p class="videochannel">' + 
         value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') + ' &middot; <a href="https://www.youtube.com/channel/' + value.snippet.channelId + '" target="_blank">' +
-        value.snippet.channelTitle + '</a></p><a class="read_description" href="#v' + index + '" rel="modal:open"><i class="fa fa-question-circle" aria-hidden="true"></i> Read description</a><p class="fulldescription" id="v' + index + '" style="display: none;"><span class="fd_title"><i class="fa fa-question-circle" aria-hidden="true"></i> ' + value.snippet.title + '</span><span class="fd_by">Posted by <a href="https://www.youtube.com/channel/' + value.snippet.channelId + '" target="_blank">' +
-        value.snippet.channelTitle + '</a> on '+ value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') +'</span>' + value.snippet.description + '<a class="fd_link" href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity rel="modal:close"> Watch the video to learn more<i>!</i></a></p><p class="videodescription">' + value.snippet.description.substring(0, 40).trim() + '...' + '</p></td></tr></table>';
+        value.snippet.channelTitle + '</a></p><!--<a class="read_description" href="#v' + index + '" rel="modal:open"><i class="fa fa-question-circle" aria-hidden="true"></i> Read description</a>--><p class="fulldescription" id="v' + index + '" style="display: none;"><span class="fd_title"><i class="fa fa-question-circle" aria-hidden="true"></i> ' + value.snippet.title + '</span><span class="fd_by">Posted by <a href="https://www.youtube.com/channel/' + value.snippet.channelId + '" target="_blank">' +
+        value.snippet.channelTitle + '</a> on '+ value.snippet.publishedAt.substring(0, value.snippet.publishedAt.length - 14).replace(/-/g, '/') +'</span>' + value.snippet.description + '<a class="fd_link" href="https://www.youtube.com/watch?v=' + value.id.videoId + '?vq=hd1080" data-lity rel="modal:close"> Watch the video to learn more<i>!</i></a></p><p class="videodescription">' + value.snippet.description.substring(0, 110).trim() + '...' + '</p></td></tr></table>';
       });
       //console.log(html);
       $('.youtube').html(html); // changed the append here to html, and below
-      $('.external-link').html('<p class="ext_link"><a href="https://www.youtube.com/results?search_query=' + $('#races option:selected').text() + 
+      $('.external-link').html('<p class="ext_link"><a href="https://www.youtube.com/results?search_query=' + $('.head').text() + 
         '" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp;More on YouTube</a></p>');
       $('.results-page').removeClass('hidden');
 
