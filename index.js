@@ -5,16 +5,20 @@ const youtube_baseurl = "";
 
 function userSearch() {
     // just creates the variable of the search term
-    $('.entry-form').submit(function(event) {  
+    console.log('test');
+
+    $('.head').on('click', function(event) {  
         event.preventDefault();    
-        //let entry = $("#races option:selected").val();
-        let entry = $('#races option:selected').text();
-        //console.log(entry);
+        let entry = $(this).text();
+        console.log(entry);
         searchYouTube(entry);
         }
       );
     }
     
+    $(".check-span").on("click", function () {
+      alert($(this).prev('span').text());
+  });
 
 //AJAX call to YouTube API
 function searchYouTube(entry) {
