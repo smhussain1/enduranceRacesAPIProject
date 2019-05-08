@@ -16,9 +16,6 @@ function userSearch() {
       );
     }
     
-    $(".check-span").on("click", function () {
-      alert($(this).prev('span').text());
-  });
 
 //AJAX call to YouTube API
 function searchYouTube(entry) {
@@ -35,6 +32,7 @@ function searchYouTube(entry) {
     let url = 'https://www.googleapis.com/youtube/v3/search';
     $.getJSON(url, params, function(data) {
       showYouTube(data.items);
+      showHeader(entry);
     });
   }
   
@@ -68,8 +66,12 @@ function showYouTube(results) {
       $('.external-link').html('<p class="ext_link"><a href="https://www.youtube.com/results?search_query=' + $('.head').text() + 
         '" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i> &nbsp;More on YouTube</a></p>');
       $('.results-page').removeClass('hidden');
-
+      $('.search-again').html('<a href="#page-top">Back to top of page</a>');
     }
+}
+
+function showHeader(entry) {
+  $('.main-header').html('<h1>'+ entry + '</h1>');
 }
 
 $(function() {
