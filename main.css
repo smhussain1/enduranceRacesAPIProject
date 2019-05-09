@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-image: url("./images/tor1.jpg");
+    background-image: url("./images/Tor1.jpg");
     background-size: cover; /* media query and play with this value? */
     background-repeat: no-repeat;
     background-position: center;
