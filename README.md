@@ -20,19 +20,15 @@ https://smhussain1.github.io/enduranceRacesAPIProject/
 ## Screenshots
 Login Screen/Landing Page:
 
-![login screen](screenshots/login.png)
+![page_one](https://smhussain1.github.io/enduranceRacesAPIProject/images/page1.jpg)
 
 About:
 
-![about](screenshots/about.png)
+![page_two](https://smhussain1.github.io/enduranceRacesAPIProject/images/page2.jpg)
 
 Library:
 
-![library](screenshots/library.png)
-
-Recommendations:
-
-![recommendations](screenshots/recommendations.png)
+![page_three](https://smhussain1.github.io/enduranceRacesAPIProject/images/page3.jpg)
 
 
 ## Built With
