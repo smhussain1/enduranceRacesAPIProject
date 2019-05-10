@@ -3,14 +3,14 @@
 }
 
 html {
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0px;
     font-family: oswald, sans-serif;
 }
 
 body {
     background-image: url("./images/Tor1.jpg");
-    background-size: cover; /* media query and play with this value? */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
@@ -19,7 +19,7 @@ body {
 }
 
 body:after {
-    content:""; /* What does this mean? */
+    content:""; 
     position: absolute;
     left: 0; top: 0;
     width: 100%;
@@ -27,6 +27,8 @@ body:after {
     background: rgba(0, 0, 0, .4);
     z-index: 1;
     margin: 0px;
+    min-width: 100%;
+
 }
 
 body > * {
@@ -35,9 +37,15 @@ body > * {
     color: whitesmoke;
 }
 
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 .top {
-    margin: 50px;
+    margin: 30px;
     display: flex;
     justify-content: center;
 
@@ -50,14 +58,14 @@ body > * {
 .hide {
     display: none;
 }
-
+/*
 .container {
     display: flex;
     height: 1275px;
     width: 100%;
     justify-content: space-around;
 }
-
+*/
 
 ul {
     padding: 0px; 
@@ -66,49 +74,51 @@ ul {
 
 
 ul li {
-    float: left; 
-    width: 800px; 
-    height: 40px; 
+    width: 100%; 
     opacity: .9; 
-    line-height: 40px; 
+    line-height: 30px; 
     text-align: center; 
     transition: 0.3s;
     text-decoration: none; 
     color: white; 
     display: block;
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
 }
 
 .head-ul {
-    font-size: 25px; 
+    font-size: 20px; 
     margin-bottom: 25px;
+    width: 100%;
 }
 
-ul li ul li{ 
-    margin-top: 10px;
-    margin-bottom: 10px; 
-} 
+.race-list { 
+    display: flex;
+    flex-direction: column;
+}
+   
 
-ul li ul li:hover  { 
+ul li:hover  { 
     display: block;
     opacity: .8;  
     font-size: x-large;
     cursor: pointer;
 } 
 
-h1 {
+h2 {
     margin: 0px;
     padding-top: 50px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .feedback {
-    margin-top: 425px;
+    /*margin-top: 225px;*/
     display: block;
     text-align: center;
     font-style: italic;
-    font-size: smaller;
+    font-size: small;
     margin-bottom: 0px;
     padding-bottom: 10px;
 
@@ -165,7 +175,7 @@ h3 {
 
 
 .results-page:after {
-        content:""; /* What does this mean? */
+        content:""; 
         position: absolute;
         left: 0; top: 0;
         width: 100%;
@@ -194,13 +204,4 @@ h3 {
 .external-link:hover, .search-again:hover {
     opacity: .8;
     cursor: pointer;
-}
-
-@media only screen and (max-width: 450px) {
-    p .videodescription {
-        font-size: 12px;
-    }
-    .results {
-        height: 80vh;
-}
 }
