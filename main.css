@@ -136,28 +136,49 @@ h2 {
     padding-bottom: 0px;
 }
 
+/* start results display */
+
 table {
-    width: 650px;
+    width: 50%; /*650px*/
+    margin: 20px;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: right;*/
+
 }
 
-.thumbnailWrap {
-    width: 335px;
+tr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thumbnailWrap, thumbnail {
+    width: 30%;
+    /*width: 335px;
     height: 237px;
-    margin-right: 20px;
+    margin-right: 20px;*/
 }
 
 .youtube, .external-link {
     height: 50%;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
+/*td, tr {
+    width: 30%;
+}*/
+/*
+tbody {
+    width: 50%;
+}*/
+/*
 td.tdtext {
     vertical-align: initial;
 }
-
+*/
 h3 {
     color: black;
     text-align: center;
@@ -171,6 +192,7 @@ h3 {
 
 .videotitle {
     font-weight: bold;
+    width: 100%;
 }
 
 
