@@ -18,15 +18,15 @@ I wanted to create the resource that I have been looking for, and one that can g
 https://smhussain1.github.io/enduranceRacesAPIProject/
 
 ## Screenshots
-Login Screen/Landing Page:
+First Page the User Sees:
 
 ![page_one](https://smhussain1.github.io/enduranceRacesAPIProject/images/page1.jpg)
 
-About:
+First Page of Videos from the Search Results:
 
 ![page_two](https://smhussain1.github.io/enduranceRacesAPIProject/images/page2.jpg)
 
-Library:
+Last Page of Videos from the Search Results:
 
 ![page_three](https://smhussain1.github.io/enduranceRacesAPIProject/images/page3.jpg)
 
