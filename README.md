@@ -20,15 +20,15 @@ https://smhussain1.github.io/enduranceRacesAPIProject/
 ## Screenshots
 First Page the User Sees:
 
-![page_one](https://smhussain1.github.io/enduranceRacesAPIProject/images/page1.jpg)
+![page_one](images/page1.jpg)
 
 First Page of Videos from the Search Results:
 
-![page_two](https://smhussain1.github.io/enduranceRacesAPIProject/images/page2.jpg)
+![page_two](images/page2.jpg)
 
 Last Page of Videos from the Search Results:
 
-![page_three](https://smhussain1.github.io/enduranceRacesAPIProject/images/page3.jpg)
+![page_three](images/page3.jpg)
 
 
 ## Built With
