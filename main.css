@@ -152,13 +152,15 @@ tr {
     flex-direction: column;
     justify-content: center;
 }
+
+/*
 .thumbnailWrap, thumbnail {
     width: 30%;
     /*width: 335px;
     height: 237px;
     margin-right: 20px;*/
 }
-
+*/
 .youtube, .external-link {
     height: 50%;
     width: 100%;
@@ -226,4 +228,36 @@ h3 {
 .external-link:hover, .search-again:hover {
     opacity: .8;
     cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+    td.tdtext {
+        vertical-align: initial;
+    }
+
+    table {
+        width: 20%; /*650px*/
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+    }
+
+    .youtube, .external-link {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    td, tr {
+    width: 300px;
+}
+
+    tbody {
+        width: 300px;
+    }
 }
