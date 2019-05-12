@@ -1,3 +1,4 @@
+/*
 * {
     box-sizing: border-box;
 }
@@ -66,7 +67,7 @@ form {
     justify-content: space-around;
 }
 */
-
+/*
 ul {
     padding: 0px; 
     list-style: none; 
@@ -115,7 +116,7 @@ h2 {
 
 .feedback {
     /*margin-top: 225px;*/
-    display: block;
+    /*display: block;
     text-align: center;
     font-style: italic;
     font-size: small;
@@ -137,14 +138,14 @@ h2 {
 }
 
 /* start results display */
-
+/*
 table {
     width: 50%; /*650px*/
-    margin: 20px;
+    /*margin: 20px;
     /*display: flex;
     flex-direction: column;
     justify-content: right;*/
-
+/*
 }
 
 tr {
@@ -159,7 +160,7 @@ tr {
     /*width: 335px;
     height: 237px;
     margin-right: 20px;*/
-
+/*
 .youtube, .external-link {
     height: 50%;
     width: 100%;
@@ -180,6 +181,7 @@ td.tdtext {
     vertical-align: initial;
 }
 */
+/*
 h3 {
     color: black;
     text-align: center;
@@ -229,41 +231,9 @@ h3 {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 700px) {
-    td.tdtext {
-        vertical-align: initial;
-    }
-
-    table {
-        width: 20%; /*650px*/
-        margin: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    
-    }
-
-    .youtube, .external-link {
-        height: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    td, tr {
-    width: 300px;
-}
-
-    tbody {
-        width: 300px;
-    }
-}
-
 /* Older Responsive for Widescreens -better than above I think....:) testing now...: */
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1300px) {
 
 * {
     box-sizing: border-box;
@@ -403,7 +373,19 @@ h2 {
     padding-bottom: 0px;
 }
 
-table {
+/* 700 also has this..:
+
+    td, tr {
+    width: 300px;
+}
+
+    tbody {
+        width: 300px;
+    }
+}
+*/
+
+table { /*different than 700*/
     width: 650px;
 }
 
@@ -419,9 +401,10 @@ table {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    /* 700 also has this code oddly:          justify-content: center; */
 }
 
-td.tdtext {
+td.tdtext { /*same as 700*/
     vertical-align: initial;
 }
 
